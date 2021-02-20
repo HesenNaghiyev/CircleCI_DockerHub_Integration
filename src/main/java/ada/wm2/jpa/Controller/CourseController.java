@@ -92,7 +92,7 @@ public class CourseController {
     }
     @GetMapping("/new")
     public String newCoursePage(Model model){
-        logger.debug("Clicked Add Course method. ");
+        logger.debu("Clicked Add Course method. ");
         model.addAttribute("course",new Course());
         logger.info("");
         return "courses/add";
