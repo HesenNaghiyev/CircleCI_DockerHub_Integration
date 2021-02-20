@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <meta charset="UTF-8">
+    <title>Welcome Students Crud Operations</title>
+    <style>
+        body{
+
+            background-image: url("https://img.itinari.com/pages/images/original/b1a657c6-ab9c-419b-a01f-18b4ee6aee8f-859736_566333610053089_601075272_o.jpg?ch=DPR&dpr=1&w=1200&h=800&s=22058c73c1230f63cea18e7e14524f3e");
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        .container {
+
+        }
+        .authorName{
+            font-size: 50px;
+            color: white;
+        }
+        /*.byIdLabel{*/
+        /*    font-weight: bold;*/
+        /*    color: red;*/
+        /*}*/
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="row d-flex justify-content-center">
+        <div class="w-50">
+            <h2><a th:text="${message}"/></h2>
+            <h2><a th:text="${error}"/></h2>
+            <div class="d-flex" style="justify-content:flex-end">
+
+            </div>         <br>
+            <br>
+            <form action="/student/id" method="GET">
+                <h3 class="byIdLabel text-center text-danger">Find Student by Id</h3>
+                <div class="d-flex">
+                    <input required class="form-control" type="text" name="id">
+                    <button class="btn btn-warning btn-sm mt-2 ml-2" type="submit" >FindById</button>
+                </div>
+                <p style="color:red"  th:text="${message1}"><p>
+
+            </form>
+            <form action="/student/gethighgpa" method="get" class="d-flex" style="justify-content: space-around">
+                <button class="btn btn-warning btn-sm mt-2"  type="submit"> Get Students  More than 3.5 GPA</button>
+                <a class="btn btn-sm btn-danger mt-2" href="/course/"> Go to Course Index page</a>
+                <a class="btn btn-sm btn-danger mt-2" href="/course/list">Course List</a>
+            </form>
+            <div class="mt-5 w-100">
+                <h1 class="text-center authorName">Hasan Naghiyev</h1>
+                <div class="forButton w-100 d-flex justify-content-center mt-5">
+                     <a class="btn btn-sm btn-success" href="/student/list"> Click Here to see Student List</a>
+                </div>
+            </div>
+    </div>
+</div>
+
+
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+</html>
+
