@@ -1,7 +1,7 @@
 version: 2.1
 orbs:
-  aws-ecr: circleci/aws-ecr@x.y.z
-  aws-ecs: circleci/aws-ecs@0x.y.z
+  # https://circleci.com/developer/orbs/orb/circleci/aws-ecr
+  aws-ecr: circleci/aws-ecr@6.15.0
 
 jobs:
   build:
@@ -37,7 +37,7 @@ jobs:
           destination: circleci_docker_integration
 
 workflows:
-  node-tests:
+  build-and-deploy:
     jobs:
       - aws-ecr/build-and-push-image:
           repo: circleci_ecr
