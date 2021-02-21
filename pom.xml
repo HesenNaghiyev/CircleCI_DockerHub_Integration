@@ -94,6 +94,7 @@
 				</configuration>
 			</plugin>
         </plugins>
+		<finalName>circleci_ecr_docker</finalName>
 	</build>
 
 </project>
